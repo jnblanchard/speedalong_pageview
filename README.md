@@ -1,50 +1,53 @@
 # Speed PageView - Implicit Scrollbar
 
+
+## Overview
 Developers are responsible for solving a wide scope of issues, one sticky problem is nested scrollable-containers. Often developers are presented with a design that requires page turning. 
 PageView does this stuff for you, but it does not feature page surfing. In UIKit a collection-view may come with a nested scroll bar. Implicit scrollbars eliminate cartesian confusion. 
 My app shows off an implicit scrollbar that works with a PageView. The scrollbar can be tapped to quickly jump to a corresponding page. Along the greater body, the user can (slowly) turn pages sequentially. The right bar is scrollable and flips pages quickly.
 There exists an enlarged hit-box for reaching the first and last page, but pages from (pages.length-2) can be jumped to by tapping the appropriate pigeon-holed height.
 SlidingPageView is stack with a PageView on the bottom, a Container (slider) that animates y-direction, and a GestureDetector that is 44 pixels wide and the height of the screen.
 
+## Jumping Pages
 The right side has the hidden gesture detector, the slider will show along the top when first entering the screen, but after 1.5 secs idling the slider disappears from the screen.
 After a tap gesture, the slider will jump to the location, and the PageView will also jump to the mapped index of the tap location. After slider animates off screen.
 During a drag gesture, the slider will jump to the location, and the PageView will also jump to the mapped index of the tap location; does not animate the slider off screen.
 After a drag gesture ends, starts animating the slider off screen.
 
+## Notes
 The SlidingPageView only supports vertical PageView direction, but it could be written to support horizontal page flipping.
 A horizontal SlidingPageView may be delightful way to implement a timeline or reading experience.
 It was really difficult having less than 5120 bytes of Dart, I rewrote this project 5-6 times with different implementations and features.
 
 
 ## Gesture Dimensions
-___________________________________________________________________
+
 Scroll Gesture Detector Cell Spacing (mapping to page indices)
 The goal is to make the first and last page easiest to turn to.
 Bart Stations (47 cells)  (|| => pigeonHoleCellHeight)
 
-Appbar or Top
+###Appbar or Top
 __________________
-    ||           |
-    || page 1    |
-    ||           ||
-  0 spacing      |
-    || page 2    |
-  0 spacing      |
-    || page 3    |
-  0 spacing      |
-    ...          |
-    ...          |
-    ...          |
-    ...          |
-  0 spacing      |
-    || page 46   |
-  0 spacing      |
-    ||           |
-    || page 47   |
-    ||           |
-_________________|
-Nav Bar or Bottom
-___________________________________________________________________
+|   ||           |
+|   || page 1    |
+|   ||           ||
+| 0 spacing      |
+|   || page 2    |
+| 0 spacing      |
+|   || page 3    |
+| 0 spacing      |
+|   ...          |
+|   ...          |
+|   ...          |
+|   ...          |
+| 0 spacing      |
+|   || page 46   |
+| 0 spacing      |
+|   ||           |
+|   || page 47   |
+|   ||           |
+|________________|
+###Nav Bar or Bottom
 
 
 ## Gesture details to page number
