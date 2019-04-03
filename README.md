@@ -1,4 +1,4 @@
-# Speed PageView - Implicit Scrollbar
+# SlidingPageView: An implicit scrollbar for PageView
 ![](https://static.wixstatic.com/media/8e69fb_94f12bd5464341d19c1dad243819f7d8~mv2.gif)
 
 ## Overview
