@@ -57,7 +57,7 @@ __________________
 Nav Bar or Bottom
 ```
 
-## Gesture (tap or drag) to Page#
+## Gesture (tap or drag) to Page Number
 When a tap or scroll occurs, a local touch position is computed. This gives is a y-value that ranges from 0 to the height of the PageView.
 
 #### Page 1
