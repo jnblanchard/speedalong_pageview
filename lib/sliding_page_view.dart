@@ -53,15 +53,15 @@ class _SlidingPageViewState extends State<SlidingPageView> with SingleTickerProv
       rebuild(value);
       _sliderOpacityController.forward();
     },));
-    var detector = Positioned(top: 0, bottom: 0, right: 0, width: 44, child: GestureDetector(onTapDown: (details) {
+    var detector = Positioned(top: 0, bottom: 0, right: 0, width: (MediaQuery.of(context).size.width / 9)+MediaQuery.of(context).padding.right, child: GestureDetector(onTapDown: (details) {
       jumpWith(details.globalPosition);
       _sliderOpacityController.forward();
     }, onVerticalDragUpdate: (details) {
       jumpWith(details.globalPosition);
     }, onVerticalDragEnd: (details) {
       _sliderOpacityController.forward();
-    } ));
-    var slider = Positioned(top: offsetFor(_index), height: _sliderHeight, right: 2, width: 6, child: Container(decoration: BoxDecoration(color: Colors.white.withOpacity(_sliderAnimation.value), borderRadius: BorderRadius.circular(8))));
+    }));
+    var slider = Positioned(top: offsetFor(_index), height: _sliderHeight, right: MediaQuery.of(context).padding.right+2, width: 6, child: Container(decoration: BoxDecoration(color: Colors.white.withOpacity(_sliderAnimation.value), borderRadius: BorderRadius.circular(8))));
     return Stack(children: <Widget>[pageView, slider, detector]);
   }
 }

@@ -6,12 +6,12 @@
 Developers are responsible for solving a wide scope of issues, one sticky problem is nested scrollable-containers. Often developers are presented with a design that requires page turning. 
 PageView does this stuff for you, but it does not feature page surfing. In UIKit a collection-view may come with a nested scroll bar. The implicit scrollbar eliminates cartesian confusion. 
 My app shows off an implicit scrollbar that works with a PageView. The scrollbar can be tapped to quickly jump to a corresponding page. Along the greater body, the user can (slowly) turn pages sequentially. The right bar is scrollable and flips pages quickly.
-There exists an enlarged hit-box for reaching the first and last page, but pages from (pages.length-2) can be jumped to by tapping the appropriate pigeon-holed height.
-SlidingPageView is stack with a PageView on the bottom, a Container (slider) that animates y-direction, and a GestureDetector that is 44 pixels wide and the height of the screen.
+There exists an enlarged hit-box for reaching the first and last page, but pages from (pages.length-2) are jumped to by tapping the appropriate pigeon-holed location.
+SlidingPageView is a stack with a PageView on the bottom, a Container (slider) that animates y-direction, and a GestureDetector that is 44 pixels wide and the height of the screen.
 
 ## Jumping Pages
-The right side has the hidden gesture detector, the slider will show along the top when first entering the screen, but after 1.5 secs idling the slider disappears from the screen.
-After a tap gesture, the slider will jump to the location, and the PageView will also jump to the mapped index of the tap location. After slider animates off screen.
+The right side has the hidden gesture detector, the slider will show along the top when first entering the screen, but after 1.5 secs of idling the slider disappears from the screen.
+After a tap gesture, the slider will jump to the touch location, and the PageView will also jump to the mapped index of the tap location. After slider animates off screen.
 During a drag gesture, the slider will jump to the location, and the PageView will also jump to the mapped index of the tap location; does not animate the slider off screen.
 After a drag gesture ends, starts animating the slider off screen.
 

@@ -4,30 +4,50 @@
     "lat": 37.79719,
     "long": -122.265226
   },
-  "DALY": {
-    "name": "Daly City",
-    "lat": 37.706507,
-    "long": -122.469282
+  "COLS": {
+    "name": "Coliseum",
+    "lat": 37.754059,
+    "long": -122.197707
   },
-  "DUBL": {
-    "name": "Dublin/Pleasanton",
-    "lat": 37.70246,
-    "long": -121.89708
+  "PCTR": {
+    "name": "Pittsburg Center",
+    "lat": 38.016892,
+    "long": -121.889117
   },
   "RICH": {
     "name": "Richmond",
     "lat": 37.936859,
     "long": -122.353087
   },
-  "WARM": {
-    "name": "Warm Springs",
-    "lat": 37.502606,
-    "long": -121.939349
+  "FRMT": {
+    "name": "Fremont",
+    "lat": 37.557479,
+    "long": -121.976623
+  },
+  "HAYW": {
+    "name": "Hayward",
+    "lat": 37.669801,
+    "long": -122.086922
+  },
+  "SFIA": {
+    "name": "SF Airport",
+    "lat": 37.615991,
+    "long": -122.392466
+  },
+  "DUBL": {
+    "name": "Dublin/Pleasanton",
+    "lat": 37.70246,
+    "long": -121.89708
   },
   "FTVL": {
     "name": "Fruitvale",
     "lat": 37.775014,
     "long": -122.224267
+  },
+  "WARM": {
+    "name": "Warm Springs",
+    "lat": 37.502606,
+    "long": -121.939349
   },
   "SANL": {
     "name": "San Leandro",
@@ -39,11 +59,6 @@
     "lat": 37.696775,
     "long": -122.12588
   },
-  "HAYW": {
-    "name": "Hayward",
-    "lat": 37.669801,
-    "long": -122.086922
-  },
   "SHAY": {
     "name": "South Hayward",
     "lat": 37.634377,
@@ -54,25 +69,10 @@
     "lat": 37.590677,
     "long": -122.01734
   },
-  "FRMT": {
-    "name": "Fremont",
-    "lat": 37.557479,
-    "long": -121.976623
-  },
-  "ROCK": {
-    "name": "Rockridge",
-    "lat": 37.844737,
-    "long": -122.251366
-  },
   "ANTC": {
     "name": "Antioch",
     "lat": 37.99575,
     "long": -121.780059
-  },
-  "SFIA": {
-    "name": "SF Airport",
-    "lat": 37.615991,
-    "long": -122.392466
   },
   "ORIN": {
     "name": "Orinda",
@@ -94,11 +94,6 @@
     "lat": 37.928631,
     "long": -122.055243
   },
-  "CONC": {
-    "name": "Concord",
-    "lat": 37.973737,
-    "long": -122.029095
-  },
   "NCON": {
     "name": "North Concord/Martinez",
     "lat": 38.003251,
@@ -109,11 +104,6 @@
     "lat": 38.01761,
     "long": -121.945299
   },
-  "PCTR": {
-    "name": "Pittsburg Center",
-    "lat": 38.016892,
-    "long": -121.889117
-  },
   "MLBR": {
     "name": "Millbrae",
     "lat": 37.600219,
@@ -123,11 +113,6 @@
     "name": "12th St. Oakland City Center",
     "lat": 37.803661,
     "long": -122.271688
-  },
-  "19TH": {
-    "name": "19th St. Oakland",
-    "lat": 37.808856,
-    "long": -122.268503
   },
   "MCAR": {
     "name": "MacArthur",
@@ -214,11 +199,6 @@
     "lat": 37.924919,
     "long": -122.317052
   },
-  "COLM": {
-    "name": "Colma",
-    "lat": 37.684635,
-    "long": -122.466232
-  },
   "SSAN": {
     "name": "South San Francisco",
     "lat": 37.664269,
@@ -229,9 +209,29 @@
     "lat": 37.638976,
     "long": -122.417039
   },
-  "COLS": {
-    "name": "Coliseum",
-    "lat": 37.754059,
-    "long": -122.197707
+  "CONC": {
+    "name": "Concord",
+    "lat": 37.973737,
+    "long": -122.029095
+  },
+  "COLM": {
+    "name": "Colma",
+    "lat": 37.684635,
+    "long": -122.466232
+  },
+  "ROCK": {
+    "name": "Rockridge",
+    "lat": 37.844737,
+    "long": -122.251366
+  },
+  "19TH": {
+    "name": "19th St. Oakland",
+    "lat": 37.808856,
+    "long": -122.268503
+  },
+  "DALY": {
+    "name": "Daly City",
+    "lat": 37.706507,
+    "long": -122.469282
   }
 }
