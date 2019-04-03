@@ -1,0 +1,80 @@
+name: speedalong_pageview
+description: An example of a speed-scrollable PageView using Bart train stations.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^0.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+  - station.json
+  - images/ASHB.png
+  - images/WARM.png
+  - images/FRMT.png
+  - images/UCTY.png
+  - images/SHAY.png
+  - images/HAYW.png
+  - images/CAST.png
+  - images/BAYF.png
+  - images/WDUB.png
+  - images/DUBL.png
+  - images/MLBR.png
+  - images/SANL.png
+  - images/SFIA.png
+  - images/SBRN.png
+  - images/COLS.png
+  - images/SSAN.png
+  - images/FTVL.png
+  - images/COLM.png
+  - images/LAKE.png
+  - images/12TH.png
+  - images/BALB.png
+  - images/DALY.png
+  - images/19TH.png
+  - images/GLEN.png
+  - images/WOAK.png
+  - images/24TH.png
+  - images/MCAR.png
+  - images/16TH.png
+  - images/CIVC.png
+  - images/ROCK.png
+  - images/POWL.png
+  - images/MONT.png
+  - images/EMBR.png
+  - images/ORIN.png
+  - images/LAFY.png
+  - images/DBRK.png
+  - images/WCRK.png
+  - images/NBRK.png
+  - images/PCTR.png
+  - images/ANTC.png
+  - images/PITT.png
+  - images/NCON.png
+  - images/RICH.png
+  - images/CONC.png
+  - images/DELN.png
+  - images/PLZA.png
+  - images/PHIL.png
+
+  fonts:
+  - family: SourceSansPro
+    fonts:
+    - asset: fonts/SourceSansPro-Black.ttf
+    - asset: fonts/SourceSansPro-Bold.ttf
+    - asset: fonts/SourceSansPro-Light.ttf
+    - asset: fonts/SourceSansPro-Regular.ttf
+    - asset: fonts/SourceSansPro-SemiBold.ttf

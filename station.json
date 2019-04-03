@@ -1,0 +1,237 @@
+{
+  "LAKE": {
+    "name": "Lake Merritt",
+    "lat": 37.79719,
+    "long": -122.265226
+  },
+  "DALY": {
+    "name": "Daly City",
+    "lat": 37.706507,
+    "long": -122.469282
+  },
+  "DUBL": {
+    "name": "Dublin/Pleasanton",
+    "lat": 37.70246,
+    "long": -121.89708
+  },
+  "RICH": {
+    "name": "Richmond",
+    "lat": 37.936859,
+    "long": -122.353087
+  },
+  "WARM": {
+    "name": "Warm Springs",
+    "lat": 37.502606,
+    "long": -121.939349
+  },
+  "FTVL": {
+    "name": "Fruitvale",
+    "lat": 37.775014,
+    "long": -122.224267
+  },
+  "SANL": {
+    "name": "San Leandro",
+    "lat": 37.721956,
+    "long": -122.160825
+  },
+  "BAYF": {
+    "name": "Bay Fair",
+    "lat": 37.696775,
+    "long": -122.12588
+  },
+  "HAYW": {
+    "name": "Hayward",
+    "lat": 37.669801,
+    "long": -122.086922
+  },
+  "SHAY": {
+    "name": "South Hayward",
+    "lat": 37.634377,
+    "long": -122.05719
+  },
+  "UCTY": {
+    "name": "Union City",
+    "lat": 37.590677,
+    "long": -122.01734
+  },
+  "FRMT": {
+    "name": "Fremont",
+    "lat": 37.557479,
+    "long": -121.976623
+  },
+  "ROCK": {
+    "name": "Rockridge",
+    "lat": 37.844737,
+    "long": -122.251366
+  },
+  "ANTC": {
+    "name": "Antioch",
+    "lat": 37.99575,
+    "long": -121.780059
+  },
+  "SFIA": {
+    "name": "SF Airport",
+    "lat": 37.615991,
+    "long": -122.392466
+  },
+  "ORIN": {
+    "name": "Orinda",
+    "lat": 37.878423,
+    "long": -122.183701
+  },
+  "LAFY": {
+    "name": "Lafayette",
+    "lat": 37.893187,
+    "long": -122.124706
+  },
+  "WCRK": {
+    "name": "Walnut Creek",
+    "lat": 37.90568,
+    "long": -122.067499
+  },
+  "PHIL": {
+    "name": "Pleasant Hill/Contra Costa Centre",
+    "lat": 37.928631,
+    "long": -122.055243
+  },
+  "CONC": {
+    "name": "Concord",
+    "lat": 37.973737,
+    "long": -122.029095
+  },
+  "NCON": {
+    "name": "North Concord/Martinez",
+    "lat": 38.003251,
+    "long": -122.024658
+  },
+  "PITT": {
+    "name": "Pittsburg/Bay Point",
+    "lat": 38.01761,
+    "long": -121.945299
+  },
+  "PCTR": {
+    "name": "Pittsburg Center",
+    "lat": 38.016892,
+    "long": -121.889117
+  },
+  "MLBR": {
+    "name": "Millbrae",
+    "lat": 37.600219,
+    "long": -122.386751
+  },
+  "12TH": {
+    "name": "12th St. Oakland City Center",
+    "lat": 37.803661,
+    "long": -122.271688
+  },
+  "19TH": {
+    "name": "19th St. Oakland",
+    "lat": 37.808856,
+    "long": -122.268503
+  },
+  "MCAR": {
+    "name": "MacArthur",
+    "lat": 37.82909,
+    "long": -122.267036
+  },
+  "CAST": {
+    "name": "Castro Valley",
+    "lat": 37.690774,
+    "long": -122.075577
+  },
+  "WDUB": {
+    "name": "West Dublin/Pleasanton",
+    "lat": 37.699768,
+    "long": -121.928186
+  },
+  "WOAK": {
+    "name": "West Oakland",
+    "lat": 37.804729,
+    "long": -122.295141
+  },
+  "EMBR": {
+    "name": "Embarcadero",
+    "lat": 37.792909,
+    "long": -122.396894
+  },
+  "MONT": {
+    "name": "Montgomery St.",
+    "lat": 37.789447,
+    "long": -122.401282
+  },
+  "POWL": {
+    "name": "Powell St",
+    "lat": 37.784486,
+    "long": -122.407959
+  },
+  "CIVC": {
+    "name": "Civic Center/UN Plaza",
+    "lat": 37.7796,
+    "long": -122.413715
+  },
+  "16TH": {
+    "name": "16th St. Mission",
+    "lat": 37.765383,
+    "long": -122.419574
+  },
+  "24TH": {
+    "name": "24th St. Mission",
+    "lat": 37.752017,
+    "long": -122.418701
+  },
+  "GLEN": {
+    "name": "Glen Park",
+    "lat": 37.733087,
+    "long": -122.433791
+  },
+  "BALB": {
+    "name": "Balboa Park",
+    "lat": 37.721765,
+    "long": -122.44744
+  },
+  "ASHB": {
+    "name": "Ashby",
+    "lat": 37.852945,
+    "long": -122.269547
+  },
+  "DBRK": {
+    "name": "Downtown Berkeley",
+    "lat": 37.870114,
+    "long": -122.268136
+  },
+  "NBRK": {
+    "name": "North Berkeley",
+    "lat": 37.873976,
+    "long": -122.283443
+  },
+  "PLZA": {
+    "name": "El Cerrito Plaza",
+    "lat": 37.90264,
+    "long": -122.298924
+  },
+  "DELN": {
+    "name": "El Cerrito del Norte",
+    "lat": 37.924919,
+    "long": -122.317052
+  },
+  "COLM": {
+    "name": "Colma",
+    "lat": 37.684635,
+    "long": -122.466232
+  },
+  "SSAN": {
+    "name": "South San Francisco",
+    "lat": 37.664269,
+    "long": -122.443955
+  },
+  "SBRN": {
+    "name": "San Bruno",
+    "lat": 37.638976,
+    "long": -122.417039
+  },
+  "COLS": {
+    "name": "Coliseum",
+    "lat": 37.754059,
+    "long": -122.197707
+  }
+}
