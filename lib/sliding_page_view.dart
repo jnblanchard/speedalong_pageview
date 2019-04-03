@@ -39,7 +39,7 @@ class _SlidingPageViewState extends State<SlidingPageView> with SingleTickerProv
   jumpWith(Offset position) {
     _sliderOpacityController.reset();
     var localY = (context.findRenderObject( ) as RenderBox).globalToLocal( position ).dy.round();
-    var nextIndex = localY <= _sliderHeight ? 0 : localY >= _totalHeight - _sliderHeight ? _itemCount-1 :  ((localY - _sliderHeight) / ((_totalHeight - (_sliderHeight*2)) / (_itemCount-2))).floor()+1;
+    var nextIndex = localY <= _sliderHeight ? 0 : localY >= _totalHeight - _sliderHeight ? _itemCount-1 :  ((localY - _sliderHeight) / ((_totalHeight - (_sliderHeight*2)) / (_itemCount-2))).round();
     if (_pageController.page != nextIndex) { _pageController.jumpToPage(nextIndex); }
     rebuild(nextIndex);
   }
