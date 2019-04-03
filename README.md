@@ -1,4 +1,4 @@
-# speedalong_pageview
+# Speed PageView - Implicit Scrollbar
 
 Developers are responsible for solving a wide scope of issues, one sticky problem is nested scrollable-containers. Often developers are presented with a design that requires page turning. 
 PageView does this stuff for you, but it does not feature page surfing. In UIKit a collection-view may come with a nested scroll bar. Implicit scrollbars eliminate cartesian confusion. 
@@ -15,36 +15,39 @@ The SlidingPageView only supports vertical PageView direction, but it could be w
 A horizontal SlidingPageView may be delightful way to implement a timeline or reading experience.
 It was really difficult having less than 5120 bytes of Dart, I rewrote this project 5-6 times with different implementations and features.
 
+
+## Gesture Dimensions
 ___________________________________________________________________
 Scroll Gesture Detector Cell Spacing (mapping to page indices)
 The goal is to make the first and last page easiest to turn to.
 Bart Stations (47 cells)  (|| => pigeonHoleCellHeight)
 
 Appbar or Top
------------------
-    ||
-    || page 1
-    ||
-  0 spacing
-    || page 2
-  0 spacing
-    || page 3
-  0 spacing
-    ...
-    ...
-    ...
-    ...
-  0 spacing
-    || page 46
-  0 spacing
-    ||
-    || page 47
-    ||
------------------
+__________________
+    ||           |
+    || page 1    |
+    ||           ||
+  0 spacing      |
+    || page 2    |
+  0 spacing      |
+    || page 3    |
+  0 spacing      |
+    ...          |
+    ...          |
+    ...          |
+    ...          |
+  0 spacing      |
+    || page 46   |
+  0 spacing      |
+    ||           |
+    || page 47   |
+    ||           |
+_________________|
 Nav Bar or Bottom
 ___________________________________________________________________
 
 
+## Gesture details to page number
 When a tap or scroll occurs, the gestureDetail create a local touch position. This gives us a touch location that ranges from 0 to the height of the PageView.
 If a tap with local yPosition less than or equal to the slider's height, then page 1 was selected. (index 0)
 If a scroll with local yPostion greater than total height subtracted by the slider's height; the last page was selected. (index itemCount-1)
@@ -55,6 +58,7 @@ int localY = (context.findRenderObject( ) as RenderBox).globalToLocal( position 
 int nextIndex = localY <= _sliderHeight ? 0 : localY >= _totalHeight - _sliderHeight ? _itemCount-1 :  pigeonHoleIndex;
 ```
 
+## Page number to yOffset 
 This method is used by a Position widget that parents the slider container. The top parameter is calculated using offSet(currentIndex).
 If at the first page, set the top value to 0. Align the slider along the top.
 If we are at the last page, set the top value to total height subtracted by the slider's height.  Align the slider along the bottom.
@@ -64,7 +68,6 @@ var pigeonHoleOffset = (index * (_totalHeight - _sliderHeight) / _itemCount);
 double offsetFor(int index) => index <= 0 ? 0 : index >= _itemCount-1 ? _totalHeight-_sliderHeight : pigeonHoleOffset;
 ```
 
-John Blanchard
-jnblanchard@mac.com
-jnblanchard.com
+[John Blanchard](https://jnblanchard.com)
+
 
