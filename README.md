@@ -28,46 +28,21 @@ Bart Stations (47 cells)  (|| => pigeonHoleCellHeight)
 
 ```
 Appbar or Top
-
 __________________
-
-|   ||           |
-
 |   || page 1    |
-
-|   ||           ||
-
-| 0 spacing      |
-
+|   || page 1    |
+|   || page 1    ||
 |   || page 2    |
-
-| 0 spacing      |
-
 |   || page 3    |
-
-| 0 spacing      |
-
 |   ...          |
-
 |   ...          |
-
 |   ...          |
-
 |   ...          |
-
-| 0 spacing      |
-
-|   || page 46   |
-
-| 0 spacing      |
-
-|   ||           |
-
+|   || page 46   |          
 |   || page 47   |
-
-|   ||           |
-
-|________________|
+|   || page 47   |
+|   || page 47   |
+------------------
 
 Nav Bar or Bottom
 ```
