@@ -16,8 +16,8 @@ After a drag gesture ends, starts animating the slider off screen.
 
 ## Notes
 The SlidingPageView only supports vertical PageView direction, but it could be written to support horizontal page flipping.
-A horizontal SlidingPageView may be delightful way to implement a timeline or reading experience.
-It was really difficult having less than 5120 bytes of Dart, I rewrote this project 5-6 times with different implementations and features.
+The horizontal SlidingPageView may be delightful way for app user's to experience a timeline or reading experience.
+It was really difficult having less than 5120 bytes of Dart, I rewrote this project 6 times with different implementations and features.
 
 
 ## Gesture Dimensions
@@ -59,8 +59,8 @@ If a tap with local yPosition less than or equal to the slider's height, then pa
 If a scroll with local yPostion greater than total height subtracted by the slider's height; the last page was selected. (index itemCount-1)
 If a tap with local yPosition greater than the slider's height but less than the total height subtracted by the slider's height; we calculate a pigeon holed index.
 ```dart
-var pigeonHoleIndex = ((localY - _sliderHeight) / ((_totalHeight - (_sliderHeight*2)) / (_itemCount-2))).floor()+1;
 int localY = (context.findRenderObject( ) as RenderBox).globalToLocal( position ).dy.round();
+int pigeonHoleIndex = ((localY - _sliderHeight) / ((_totalHeight - (_sliderHeight*2)) / (_itemCount-2))).floor()+1;
 int nextIndex = localY <= _sliderHeight ? 0 : localY >= _totalHeight - _sliderHeight ? _itemCount-1 :  pigeonHoleIndex;
 ```
 
@@ -70,7 +70,7 @@ If at the first page, set the top value to 0. Align the slider along the top.
 If we are at the last page, set the top value to total height subtracted by the slider's height.  Align the slider along the bottom.
 Otherwise we calculate a top value using the pigeon hole.
 ```dart
-var pigeonHoleOffset = (index * (_totalHeight - _sliderHeight) / _itemCount);
+double pigeonHoleOffset = (index * (_totalHeight - _sliderHeight) / _itemCount);
 double offsetFor(int index) => index <= 0 ? 0 : index >= _itemCount-1 ? _totalHeight-_sliderHeight : pigeonHoleOffset;
 ```
 
