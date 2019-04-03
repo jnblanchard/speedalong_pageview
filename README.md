@@ -9,9 +9,14 @@ There exists an enlarged hit-box for reaching the first and last page, but pages
 SlidingPageView is a stack with a PageView on the bottom, a Container (slider) that animates y-direction, and a GestureDetector that is (width of the screen / 8) wide and the height of the screen. 
 
 ## Jumping Pages
-The right side has the hidden gesture detector, the slider will show along the top when first entering the screen, but after 1.5 secs of idling the slider disappears from the screen.
-After a tap gesture, the slider will jump to the touch location, and the PageView will also jump to the mapped index of the tap location. After slider animates off screen.
-During a drag gesture, the slider will jump to the location, and the PageView will also jump to the mapped index of the tap location; does not animate the slider off screen.
+The right side has the hidden gesture detector, the slider will show along the top when first entering the screen, but after 1.5 secs the slider disappears from the screen.
+
+#### Taps
+After a tap gesture, the slider will jump to the touch location, and the PageView will also jump to the mapped index of the tap location... After the slider animates off screen
+
+#### Drags
+During a drag gesture, the slider will jump to the location, and the PageView will also jump to the mapped index of the tap location; however the slider does not animate off screen.
+
 After a drag gesture ends, starts animating the slider off screen.
 
 ## Dimensions
