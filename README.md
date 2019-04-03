@@ -92,7 +92,7 @@ double offsetFor(int index) => index <= 0 ? 0 : index >= _itemCount-1 ? _totalHe
 
 ## Limitations
 The SlidingPageView only supports vertical PageView direction, but it could be written to support horizontal page flipping.
-The horizontal SlidingPageView may be delightful way for app user's to experience a timeline or reading experience.
+For example, a horizontal SlidingPageView may be delightful way for app user's to experience a timeline or reading experience.
 
 ##### It was really difficult having less than 5120 bytes of Dart, I rewrote this project 6 times with different implementations and features.
 
