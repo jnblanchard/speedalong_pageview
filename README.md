@@ -63,10 +63,10 @@ When a tap or scroll occurs, a local touch position is computed. This gives is a
 #### Page 1
 If a tap with local y-value less than or equal to the slider's height, then page 1 was selected. (index 0)
 
-### Last Page
+#### Last Page
 If a scroll with local y-value greater than the total height subtracted by the slider's height; then the last page was selected. (index itemCount-1)
 
-### (1 < n < itemCount) Page
+#### (1 < n < itemCount) Page
 If a tap with local yPosition greater than the slider's height but less than the total height subtracted by the slider's height; we calculate a pigeon holed index.
 ```dart
 int localY = (context.findRenderObject( ) as RenderBox).globalToLocal( position ).dy.round();
@@ -83,7 +83,7 @@ If at the first page, set the top value to 0. Align the slider along the top.
 #### Last Page
 If we are at the last page, set the top value to total height subtracted by the slider's height.  Align the slider along the bottom.
 
-### (1 < n < itemCount) Page
+#### (1 < n < itemCount) Page
 Otherwise we calculate a top value using the pigeon hole.
 ```dart
 double pigeonHoleOffset = (index * (_totalHeight - _sliderHeight) / _itemCount);
