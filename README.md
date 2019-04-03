@@ -26,28 +26,49 @@ Scroll Gesture Detector Cell Spacing (mapping to page indices)
 The goal is to make the first and last page easiest to turn to.
 Bart Stations (47 cells)  (|| => pigeonHoleCellHeight)
 
-###Appbar or Top
+Appbar or Top
+
 __________________
+
 |   ||           |
+
 |   || page 1    |
+
 |   ||           ||
+
 | 0 spacing      |
+
 |   || page 2    |
+
 | 0 spacing      |
+
 |   || page 3    |
+
 | 0 spacing      |
+
 |   ...          |
+
 |   ...          |
+
 |   ...          |
+
 |   ...          |
+
 | 0 spacing      |
+
 |   || page 46   |
+
 | 0 spacing      |
+
 |   ||           |
+
 |   || page 47   |
+
 |   ||           |
+
 |________________|
-###Nav Bar or Bottom
+
+Nav Bar or Bottom
 
 
 ## Gesture details to page number
