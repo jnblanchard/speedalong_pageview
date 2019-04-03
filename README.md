@@ -17,7 +17,7 @@ After a tap gesture, the slider will jump to the touch location, and the PageVie
 #### Drags
 During a drag gesture, the slider will jump to the location, and the PageView will also jump to the mapped index of the tap location; however the slider does not animate off screen.
 
-After a drag gesture ends, starts animating the slider off screen.
+After a drag gesture ends, the slider animates off screen.
 
 ## Dimensions
 Take the relative tap or scroll position and associate the gesture with a page movement. (mapping gestures to page indices)
