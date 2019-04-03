@@ -1,5 +1,6 @@
 # Speed PageView - Implicit Scrollbar
 
+!![](https://static.wixstatic.com/media/8e69fb_303b66ab00d64e1bb2ca7a3c47ca4eff~mv2.gif)
 
 ## Overview
 Developers are responsible for solving a wide scope of issues, one sticky problem is nested scrollable-containers. Often developers are presented with a design that requires page turning. 
