@@ -14,6 +14,14 @@ SlidingPageView is a stack with a PageView on the bottom, a Container (slider) t
  
 The implicit scrollbar eliminates cartesian confusion. And SlidingPageView like many other widgets in the catalog provide a common interface for cross-platform apps.
 
+## Build
+To create a SlidingPageView, provide a list of pages. No animation, or page controllers needed. Instead that stuff is handled by the widget.
+
+``` dart
+List<Widget>[] pages = [Image.asset("images/${pageOne}.png"), Image.asset("images/${pageTwo}.png")];
+SlidingPageView(children: pages);
+```
+
 ## Jumping Pages
 The right side has the hidden gesture detector, the slider will show along the top when first entering the screen, but 1.5 secs in the slider disappears from the screen.
 
