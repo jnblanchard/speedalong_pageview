@@ -32,7 +32,8 @@ tapScrollView = GestureDetector(x: totalWidth - (totalWidth/8), y: 0, width: (to
 pigeonHoleCellHeight(int index) => (index * (totalHeight - sliderHeight) / itemCount); // Calculating the specific y value for some index.
 ```
 
-### Bart Stations (47 cells)  ( || => pigeonHoleCellHeight )
+#### Bart Stations (47 cells)  ( || => pigeonHoleCellHeight )
+```
 Appbar or Top
 __________________
 |   || page 1    |
@@ -50,6 +51,7 @@ __________________
 |   || page 47   |
 ------------------
 Nav Bar or Bottom
+```
 
 ## Gesture details to page number
 When a tap or scroll occurs, the gestureDetail create a local touch position. This gives us a touch location that ranges from 0 to the height of the PageView.
