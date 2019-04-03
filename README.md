@@ -57,10 +57,16 @@ __________________
 Nav Bar or Bottom
 ```
 
-## Gesture details to page number
-When a tap or scroll occurs, the gestureDetail create a local touch position. This gives us a touch location that ranges from 0 to the height of the PageView.
-If a tap with local yPosition less than or equal to the slider's height, then page 1 was selected. (index 0)
-If a scroll with local yPostion greater than total height subtracted by the slider's height; the last page was selected. (index itemCount-1)
+## Gesture (tap or drag) to Page#
+When a tap or scroll occurs, a local touch position is computed. This gives is a y-value that ranges from 0 to the height of the PageView.
+
+#### Page 1
+If a tap with local y-value less than or equal to the slider's height, then page 1 was selected. (index 0)
+
+### Last Page
+If a scroll with local y-value greater than the total height subtracted by the slider's height; then the last page was selected. (index itemCount-1)
+
+### (1 < n < itemCount) Page
 If a tap with local yPosition greater than the slider's height but less than the total height subtracted by the slider's height; we calculate a pigeon holed index.
 ```dart
 int localY = (context.findRenderObject( ) as RenderBox).globalToLocal( position ).dy.round();
@@ -69,9 +75,15 @@ int nextIndex = localY <= _sliderHeight ? 0 : localY >= _totalHeight - _sliderHe
 ```
 
 ## Page number to yOffset 
-This method is used by a Position widget that parents the slider container. The top parameter is calculated using offSet(currentIndex).
+This method is used by a Positioned widget that parents the slider container. The top parameter is calculated using offSet(currentIndex).
+
+#### Page 1
 If at the first page, set the top value to 0. Align the slider along the top.
+
+#### Last Page
 If we are at the last page, set the top value to total height subtracted by the slider's height.  Align the slider along the bottom.
+
+### (1 < n < itemCount) Page
 Otherwise we calculate a top value using the pigeon hole.
 ```dart
 double pigeonHoleOffset = (index * (_totalHeight - _sliderHeight) / _itemCount);
@@ -81,7 +93,8 @@ double offsetFor(int index) => index <= 0 ? 0 : index >= _itemCount-1 ? _totalHe
 ## Limitations
 The SlidingPageView only supports vertical PageView direction, but it could be written to support horizontal page flipping.
 The horizontal SlidingPageView may be delightful way for app user's to experience a timeline or reading experience.
-It was really difficult having less than 5120 bytes of Dart, I rewrote this project 6 times with different implementations and features.
+
+##### It was really difficult having less than 5120 bytes of Dart, I rewrote this project 6 times with different implementations and features.
 
 [John Blanchard](https://jnblanchard.com)
 
