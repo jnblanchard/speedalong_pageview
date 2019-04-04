@@ -4,13 +4,13 @@ import 'dart:io' show Platform;
 class SlidingPageView extends StatefulWidget {
   final List<Widget> children;
   SlidingPageView({this.children});
-  @override
-  _SlidingPageViewState createState() => _SlidingPageViewState();
+  @override _SlidingPageViewState createState() => _SlidingPageViewState();
 }
 
 class _SlidingPageViewState extends State<SlidingPageView> with SingleTickerProviderStateMixin {
 
   int _index = 0;
+  PageView _pageView;
   PageController _pageController;
   AnimationController _sliderOpacityController;
   Animation<double> _sliderAnimation;
@@ -18,6 +18,11 @@ class _SlidingPageViewState extends State<SlidingPageView> with SingleTickerProv
   @override initState() {
     super.initState();
     _pageController = PageController(initialPage: _index);
+    _pageView = PageView(children: widget.children, scrollDirection: Axis.vertical, controller: _pageController, onPageChanged: (value) {
+      _sliderOpacityController.reset();
+      rebuild(value);
+      _sliderOpacityController.forward();
+    },);
     _sliderOpacityController = AnimationController(vsync: this, duration: Duration(milliseconds: 1500));
     _sliderAnimation = Tween<double>(begin: 1, end: 0).animate(_sliderOpacityController)..addListener(() { setState(() {}); });
     _sliderOpacityController.forward();
@@ -29,10 +34,10 @@ class _SlidingPageViewState extends State<SlidingPageView> with SingleTickerProv
     super.dispose();
   }
 
-  double get _sliderHeight => MediaQuery.of(context).size.height / 7;
-  int get _appBarYOffset => Scaffold.of(context).widget.appBar != null ? AppBar().preferredSize.height.toInt() + (Platform.isIOS ? MediaQuery.of(context).size.height > MediaQuery.of(context).size.width ? 21 : 0 : 25) : 0;
-  int get _totalHeight => MediaQuery.of(context).size.height.floor() - _appBarYOffset;
-  int get _itemCount => widget.children.length;
+  get _totalHeight => MediaQuery.of(context).size.height.floor() - _yViewInsets;
+  get _yViewInsets => Scaffold.of(context).widget.appBar != null ? AppBar().preferredSize.height.toInt() + (Platform.isIOS ? MediaQuery.of(context).size.height > MediaQuery.of(context).size.width ? 21 : 0 : 25) : 0;
+  get _itemCount => widget.children.length;
+  get _sliderHeight => MediaQuery.of(context).size.height / 7;
 
   double offsetFor(int index) => index <= 0 ? 0 : index >= _itemCount-1 ? _totalHeight-_sliderHeight : (index * (_totalHeight - _sliderHeight) / _itemCount);
 
@@ -46,13 +51,8 @@ class _SlidingPageViewState extends State<SlidingPageView> with SingleTickerProv
 
   rebuild(int index) { if (index != _index) { setState(() { _index = index; }); } }
 
-  @override
-  Widget build(BuildContext context) {
-    var pageView = Positioned.fill(child: PageView(children: widget.children, scrollDirection: Axis.vertical, controller: _pageController, onPageChanged: (value) {
-      _sliderOpacityController.reset();
-      rebuild(value);
-      _sliderOpacityController.forward();
-    },));
+  @override build(BuildContext context) {
+    var pageView = Positioned.fill(child: _pageView);
     var detector = Positioned(top: 0, bottom: 0, right: 0, width: (MediaQuery.of(context).size.width / 9)+MediaQuery.of(context).padding.right, child: GestureDetector(onTapDown: (details) {
       jumpWith(details.globalPosition);
       _sliderOpacityController.forward();

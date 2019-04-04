@@ -1,24 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' show rootBundle;
-import 'dart:convert';
 import 'sliding_page_view.dart';
-
-class Station {
-  final String abbr, name;
-  Station({this.abbr, this.name});
-}
-
-Future<List<Station>> fetchStations() async {
-  Map payload = json.decode(await rootBundle.loadString("station.json"));
-  return payload.keys.map((key) { return Station(abbr: key, name: payload[key]["name"]);}).toList();
-}
+import 'stations.dart';
 
 void main() => runApp(SurfStationsApp());
 
 class SurfStationsApp extends StatelessWidget {
   get _textStyle => TextStyle(fontSize: 21, fontWeight: FontWeight.w900, color: Colors.white);
-  @override
-  Widget build(BuildContext context) {
+  @override Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
           primarySwatch: Colors.deepOrange,
