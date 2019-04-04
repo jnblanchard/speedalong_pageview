@@ -26,7 +26,7 @@ SlidingPageView(children: pages);
 The right side has the hidden gesture detector, the slider will show along the top when first entering the screen, but 1.5 secs in the slider disappears from the screen.
 
 #### Taps
-After a tap gesture, the slider will jump to the touch location, and the PageView will also jump to the mapped index of the tap location. After the slider animates off screen
+After a tap gesture, the slider will jump to the touch location, and the PageView will also jump to the mapped index of the tap location. After jumping, the slider animates off screen.
 
 #### Drags
 During a drag gesture, the slider will jump to the associated location, and the PageView will also jump to the mapped index of the tap location; however the slider does not animate off screen.

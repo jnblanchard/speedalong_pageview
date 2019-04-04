@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'sliding_page_view.dart';
 import 'stations.dart';
 
-void main() => runApp(SurfStationsApp());
+void main() => runApp(StationApp());
 
-class SurfStationsApp extends StatelessWidget {
+class StationApp extends StatelessWidget {
   get _textStyle => TextStyle(fontSize: 21, fontWeight: FontWeight.w900, color: Colors.white);
   @override Widget build(BuildContext context) {
     return MaterialApp(
