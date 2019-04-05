@@ -18,8 +18,8 @@ The implicit scrollbar eliminates cartesian confusion. SlidingPageView was built
 To create a SlidingPageView, provide a list of pages. No animation, or page controllers needed. Instead that stuff is handled by the widget.
 
 ``` dart
-List<Widget>[] pages = [Image.asset("images/${pageOne}.png"), Image.asset("images/${pageTwo}.png")];
-SlidingPageView(children: pages);
+List<Widget>[] pages = [Image.asset("images/${pageOne}.png"), Image.asset("images/${pageTwo}.png"),  Image.asset("images/${pageThree}.png"),  Image.asset("images/${pageFour}.png")];
+Widget slidingPageView = SlidingPageView(children: pages);
 ```
 
 ## Gestures
