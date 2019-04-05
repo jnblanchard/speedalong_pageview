@@ -39,7 +39,7 @@ class _SlidingPageViewState extends State<SlidingPageView> with SingleTickerProv
   get _itemCount => widget.children.length;
   get _sliderHeight => MediaQuery.of(context).size.height / 7;
 
-  offsetFor(int index) => index <= 0 ? 0 : index >= _itemCount-1 ? _totalHeight-_sliderHeight : (index * (_totalHeight - _sliderHeight) / _itemCount);
+  double offsetFor(int index) => index <= 0 ? 0 : index >= _itemCount-1 ? _totalHeight-_sliderHeight : (index * (_totalHeight - _sliderHeight) / _itemCount);
 
   jumpWith(Offset position) {
     _sliderOpacityController.reset();

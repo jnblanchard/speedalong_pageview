@@ -113,7 +113,7 @@ For example, a horizontal SlidingPageView may be a delightful way for users to d
 
 ##### It was really difficult having less than 5120 bytes of Dart, I rewrote this project 6 times with different implementations and features.
 
-# Creative Acknowledgment
+## Creative Acknowledgment
 The example app was comprised of wonderful pictures by these people.
 
 Ashby - [Franco Folini](https://www.flickr.com/photos/livenature/)
