@@ -17,14 +17,14 @@ class _SlidingPageViewState extends State<SlidingPageView> with SingleTickerProv
 
   @override initState() {
     super.initState();
+    _sliderOpacityController = AnimationController(vsync: this, duration: Duration(milliseconds: 1500));
+    _sliderAnimation = Tween<double>(begin: 1, end: 0).animate(_sliderOpacityController)..addListener(() { setState(() {}); });
     _pageController = PageController(initialPage: _index);
     _pageView = PageView(children: widget.children, scrollDirection: Axis.vertical, controller: _pageController, onPageChanged: (value) {
       _sliderOpacityController.reset();
       rebuild(value);
       _sliderOpacityController.forward();
     },);
-    _sliderOpacityController = AnimationController(vsync: this, duration: Duration(milliseconds: 1500));
-    _sliderAnimation = Tween<double>(begin: 1, end: 0).animate(_sliderOpacityController)..addListener(() { setState(() {}); });
     _sliderOpacityController.forward();
   }
 
@@ -39,7 +39,7 @@ class _SlidingPageViewState extends State<SlidingPageView> with SingleTickerProv
   get _itemCount => widget.children.length;
   get _sliderHeight => MediaQuery.of(context).size.height / 7;
 
-  double offsetFor(int index) => index <= 0 ? 0 : index >= _itemCount-1 ? _totalHeight-_sliderHeight : (index * (_totalHeight - _sliderHeight) / _itemCount);
+  offsetFor(int index) => index <= 0 ? 0 : index >= _itemCount-1 ? _totalHeight-_sliderHeight : (index * (_totalHeight - _sliderHeight) / _itemCount);
 
   jumpWith(Offset position) {
     _sliderOpacityController.reset();

@@ -4,7 +4,7 @@
 ## Overview
 This is a [contest](https://flutter.dev/create) submission.
 
-There are over 5 million mobile apps. Developers thrive in brevity; a place where programmers can bring ideas to life quickly. Widgets enticed me into working with Flutter because they're fun and expressive.
+There are over 5 million mobile apps. Developers thrive with brevity; a place where programmers can bring ideas to life quickly. Widgets enticed me into working with Flutter because they're fun and expressive.
 
 I created a stateful widget that parents a PageView. On this widget is a scrollbar that can be moved around to jump pages. 
 
@@ -38,10 +38,11 @@ My goal was to make the first and last page easiest to turn to. But all other pa
 The size of the scroll container and gesture detector are calculated below.
 ```
 itemCount = 47 // Number of Bart stations in json file (station.json).
-sliderWidth = 6;
-sliderHeight = MediaQuery.of(context).size.height / 7;
+sliderWidth = 6; // 6 pixels wide
+sliderHeight = MediaQuery.of(context).size.height / 7;  // Calculate size for slider height.
 totalWidth = MediaQuery.of(context).size.width; // (context is rebuilt upon orientation change)
-totalHeight = MediaQuery.of(context).size.height - (yOffset); // The SlidingPageView will calculate if the appBar is active and deduct it's size, it also has logic for substracting system specific amounts.
+yViewInset = Scaffold.of(context).widget.appBar != null ? AppBar().preferredSize.height.toInt() + (Platform.isIOS ? MediaQuery.of(context).size.height > MediaQuery.of(context).size.width ? 21 : 0 : 25) : 0;
+totalHeight = MediaQuery.of(context).size.height - (yViewInset); // The SlidingPageView will calculate if the appBar is active and deduct it's size, it also has logic for substracting system specific amounts.
 tapScrollView = GestureDetector(x: totalWidth - (totalWidth/8), y: 0, width: (totalWidth/8), height: totalHeight); // A transparent view that is on top of our slider on the stack.
 ```
 
@@ -113,57 +114,95 @@ For example, a horizontal SlidingPageView may be a delightful way for users to d
 # Creative Acknowledgment
 The example app was comprised of wonderful pictures by these people.
 
-Ashby - ![Franco Folini](https://www.flickr.com/photos/livenature/)
+Ashby - [Franco Folini](https://www.flickr.com/photos/livenature/)
 
-West Oakland - ![Thomas Hawk](https://www.flickr.com/photos/thomashawk/)
+West Oakland - [Thomas Hawk](https://www.flickr.com/photos/thomashawk/)
 
-12th St. Oakland City Center - ![Brian Stokle](https://www.flickr.com/photos/brunoboris/)
+12th St. Oakland City Center - [Brian Stokle](https://www.flickr.com/photos/brunoboris/)
 
-16th St. Mission - ![Adam Moss](https://www.flickr.com/photos/roadgeek/)
+16th St. Mission - [Adam Moss](https://www.flickr.com/photos/roadgeek/)
 
-19th St. Oakland - ![Victoria Hyde](https://www.flickr.com/photos/soulcookie/)
+19th St. Oakland - [Victoria Hyde](https://www.flickr.com/photos/soulcookie/)
 
-24th St. Mission - ![Stephanie Vacher](https://www.flickr.com/photos/trufflepig/)
+24th St. Mission - [Stephanie Vacher](https://www.flickr.com/photos/trufflepig/)
 
-Antioch - ![Jim Maurer](https://www.flickr.com/photos/schaffner/)
+Antioch - [Jim Maurer](https://www.flickr.com/photos/schaffner/)
 
-Balboa - ![Andrew Nash](https://www.flickr.com/photos/andynash/)
+Balboa - [Andrew Nash](https://www.flickr.com/photos/andynash/)
 
-Bay Fair - ![Adam Moss](https://www.flickr.com/photos/roadgeek/)
+Bay Fair - [Adam Moss](https://www.flickr.com/photos/roadgeek/)
 
-Civic Center/UN Plaza - ![telmo32](https://www.flickr.com/photos/telmo32/)
+Civic Center/UN Plaza - [telmo32](https://www.flickr.com/photos/telmo32/)
 
-Colma - ![cifraser1](https://www.flickr.com/photos/cifraser/)
+Colma - [cifraser1](https://www.flickr.com/photos/cifraser/)
 
-Coliseum - ![Paul Sullivan](https://www.flickr.com/photos/pfsullivan_1056/)
+Coliseum - [Paul Sullivan](https://www.flickr.com/photos/pfsullivan_1056/)
 
-Concord - ![jacampos](https://www.flickr.com/photos/jacampos/)
+Concord - [jacampos](https://www.flickr.com/photos/jacampos/)
 
-Daly City - ![meligrosa](https://www.flickr.com/photos/meligrosa/)
+Daly City - [meligrosa](https://www.flickr.com/photos/meligrosa/)
 
-Downtown Berkeley - ![Tzuhsun Hsu](https://www.flickr.com/photos/alberth2/)
+Downtown Berkeley - [Tzuhsun Hsu](https://www.flickr.com/photos/alberth2/)
 
-El Cerrito del Norte - ![~dgies](https://www.flickr.com/photos/daniel_gies/)
+El Cerrito del Norte - [~dgies](https://www.flickr.com/photos/daniel_gies/)
 
-Dublin/Plesanton - ![Eric Fischer](https://www.flickr.com/photos/walkingsf/)
+Dublin/Plesanton - [Eric Fischer](https://www.flickr.com/photos/walkingsf/)
 
-Embarcadero - ![tian2992](https://www.flickr.com/photos/tian2992/)
+Embarcadero - [tian2992](https://www.flickr.com/photos/tian2992/)
 
-Fremont - ![Mike Linksvayer](https://www.flickr.com/photos/mlinksva/)
+Fremont - [Mike Linksvayer](https://www.flickr.com/photos/mlinksva/)
 
-Fruitvale - ![pengrin™](https://www.flickr.com/photos/pengrin/)
+Fruitvale - [pengrin™](https://www.flickr.com/photos/pengrin/)
 
-Glen Park - ![Travis Wise](https://www.flickr.com/photos/photographingtravis/)
+Glen Park - [Travis Wise](https://www.flickr.com/photos/photographingtravis/)
 
-Hayward - ![wilson](https://www.flickr.com/photos/wung/)
+Hayward - [wilson](https://www.flickr.com/photos/wung/)
 
-Lafayette - ![Franco Folini](https://www.flickr.com/photos/livenature/)
+Lafayette - [Franco Folini](https://www.flickr.com/photos/livenature/)
 
-MacArthur - ![Melinda * Young](https://www.flickr.com/photos/melystu/)
+MacArthur - [Melinda * Young](https://www.flickr.com/photos/melystu/)
 
-Millbrae - ![]()
+Millbrae - [Prayitno](https://www.flickr.com/photos/prayitnophotography/)
 
+Montgomery St. - [Markus Spiering](https://www.flickr.com/photos/spierisf/)
 
-[John Blanchard](https://jnblanchard.com)
+North Berkeley - [Romel Jacinto](https://www.flickr.com/photos/37degrees/)
+
+North Concord/Martinez - [rocor](https://www.flickr.com/photos/rocor/)
+
+Orinda - [Mike Linksvayer](https://www.flickr.com/photos/mlinksva/)
+
+Pittsburg Center - [Jim Maurer](https://www.flickr.com/photos/schaffner/)
+
+Pleasant Hill/Contra Costa Centre - [Brian Stokle](https://www.flickr.com/photos/brunoboris/)
+
+Pittsburg/Bay Point - [Jim Maurer](https://www.flickr.com/photos/schaffner/)
+
+El Cerrito Plaza - [Paul Sullivan](https://www.flickr.com/photos/pfsullivan_1056/)
+
+Powell St - [Jeromyu](https://www.flickr.com/photos/jeromyu/)
+
+Richmond - [Don Barrett](https://www.flickr.com/photos/donbrr/)
+
+Rockridge - [Robert MacCloy](https://www.flickr.com/photos/zenned/)
+
+San Leandro - [AC ServiceInfo](https://www.flickr.com/photos/ac_service_info/)
+
+San Bruno - [The West End](https://www.flickr.com/photos/thewestend/)
+
+SF Airport - [inmediahk](https://www.flickr.com/photos/inmediahk/)
+
+South Hayward - [Ferrous Büller](https://www.flickr.com/photos/lumachrome/)
+
+South San Francisco - [Denmark](https://www.flickr.com/photos/tekniks/)
+
+Union City - [Rafael Castillo](https://www.flickr.com/photos/miggslives/)
+
+Warm Springs - [Jim Maurer](https://www.flickr.com/photos/schaffner/)
+
+Walnut Creek - [Paolo Valdemarin](https://www.flickr.com/photos/paolovalde/)
+
+West Dublin/Pleasanton - [Eric Fischer](https://www.flickr.com/photos/walkingsf/)
+
 
 
