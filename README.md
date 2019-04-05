@@ -91,7 +91,7 @@ int pigeonHoleIndex = ((localY - _sliderHeight) / ((_totalHeight - (_sliderHeigh
 int nextIndex = localY <= _sliderHeight ? 0 : localY >= _totalHeight - _sliderHeight ? _itemCount-1 :  pigeonHoleIndex;  // Check the top and bottom of the canvas against the touch location. If inside the pigeon, 1 < n < itemCount, use pigeon index.
 ```
 
-## Conversion: Page number to slider offset 
+## Conversion: Page Number to Slider Offset 
 This method is used by a Positioned widget that parents the slider container. The top parameter is calculated using offSet(currentIndex).
 
 #### Page 1
