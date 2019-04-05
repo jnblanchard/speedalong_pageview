@@ -1,18 +1,18 @@
-# SlidingPageView: An implicit scrollbar for PageView
+# SlidingPageView: Implicit Scrollbar for PageView
 ![](https://static.wixstatic.com/media/8e69fb_94f12bd5464341d19c1dad243819f7d8~mv2.gif)
 
 ## Overview
 This is a [contest](https://flutter.dev/create) submission.
 
-There are over 5 million mobile apps. Developers thrive in brevity, a place where programmers can bring ideas to life quickly. Expressive widgets enticed me into working with Flutter because they're fun.
+There are over 5 million mobile apps. Developers thrive in brevity; a place where programmers can bring ideas to life quickly. Widgets enticed me into working with Flutter because they're fun and expressive.
 
-I created an expressive stateful widget that parents a PageView. On this widget is a scrollbar that can be moved around to jump pages. 
+I created a stateful widget that parents a PageView. On this widget is a scrollbar that can be moved around to jump pages. 
 
 The scrollbar can be tapped to quickly jump to an associated page. Along the greater body, the user can (slowly) turn pages sequentially. The right bar is scrollable and flips pages quickly.
 There exists an enlarged hit-box for reaching the first and last page, but pages from (pages.length-2) are jumped to by tapping the appropriate pigeon-holed location.
 SlidingPageView is a stack with a PageView on the bottom, a Container (slider) that animates y-direction, and a GestureDetector that is (width of the screen / 8) wide and the height of the screen. 
  
-The implicit scrollbar eliminates cartesian confusion. And SlidingPageView like many other widgets in the catalog provide a common interface for cross-platform apps.
+The implicit scrollbar eliminates cartesian confusion. SlidingPageView was built to be a commonly used interface for all platforms, devices, and orientations.
 
 ## Build
 To create a SlidingPageView, provide a list of pages. No animation, or page controllers needed. Instead that stuff is handled by the widget.
@@ -109,6 +109,60 @@ The SlidingPageView only supports vertical PageView direction, but it could easi
 For example, a horizontal SlidingPageView may be a delightful way for users to develop a timeline or reading experience.
 
 ##### It was really difficult having less than 5120 bytes of Dart, I rewrote this project 6 times with different implementations and features.
+
+# Creative Acknowledgment
+The example app was comprised of wonderful pictures by these people.
+
+Ashby - ![Franco Folini](https://www.flickr.com/photos/livenature/)
+
+West Oakland - ![Thomas Hawk](https://www.flickr.com/photos/thomashawk/)
+
+12th St. Oakland City Center - ![Brian Stokle](https://www.flickr.com/photos/brunoboris/)
+
+16th St. Mission - ![Adam Moss](https://www.flickr.com/photos/roadgeek/)
+
+19th St. Oakland - ![Victoria Hyde](https://www.flickr.com/photos/soulcookie/)
+
+24th St. Mission - ![Stephanie Vacher](https://www.flickr.com/photos/trufflepig/)
+
+Antioch - ![Jim Maurer](https://www.flickr.com/photos/schaffner/)
+
+Balboa - ![Andrew Nash](https://www.flickr.com/photos/andynash/)
+
+Bay Fair - ![Adam Moss](https://www.flickr.com/photos/roadgeek/)
+
+Civic Center/UN Plaza - ![telmo32](https://www.flickr.com/photos/telmo32/)
+
+Colma - ![cifraser1](https://www.flickr.com/photos/cifraser/)
+
+Coliseum - ![Paul Sullivan](https://www.flickr.com/photos/pfsullivan_1056/)
+
+Concord - ![jacampos](https://www.flickr.com/photos/jacampos/)
+
+Daly City - ![meligrosa](https://www.flickr.com/photos/meligrosa/)
+
+Downtown Berkeley - ![Tzuhsun Hsu](https://www.flickr.com/photos/alberth2/)
+
+El Cerrito del Norte - ![~dgies](https://www.flickr.com/photos/daniel_gies/)
+
+Dublin/Plesanton - ![Eric Fischer](https://www.flickr.com/photos/walkingsf/)
+
+Embarcadero - ![tian2992](https://www.flickr.com/photos/tian2992/)
+
+Fremont - ![Mike Linksvayer](https://www.flickr.com/photos/mlinksva/)
+
+Fruitvale - ![pengrin™](https://www.flickr.com/photos/pengrin/)
+
+Glen Park - ![Travis Wise](https://www.flickr.com/photos/photographingtravis/)
+
+Hayward - ![wilson](https://www.flickr.com/photos/wung/)
+
+Lafayette - ![Franco Folini](https://www.flickr.com/photos/livenature/)
+
+MacArthur - ![Melinda * Young](https://www.flickr.com/photos/melystu/)
+
+Millbrae - ![]()
+
 
 [John Blanchard](https://jnblanchard.com)
 
