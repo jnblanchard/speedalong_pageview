@@ -22,7 +22,7 @@ List<Widget>[] pages = [Image.asset("images/${pageOne}.png"), Image.asset("image
 SlidingPageView(children: pages);
 ```
 
-## Jumping Pages
+## Gestures
 The right side has the hidden gesture detector, the slider will show along the top when first entering the screen, but 1.5 secs in the slider disappears from the screen.
 
 #### Taps
@@ -46,7 +46,9 @@ totalHeight = MediaQuery.of(context).size.height - (yViewInset); // The SlidingP
 tapScrollView = GestureDetector(x: totalWidth - (totalWidth/8), y: 0, width: (totalWidth/8), height: totalHeight); // A transparent view that is on top of our slider on the stack.
 ```
 
-#### Bart Stations (47 cells)  ( || => pigeonHoleCellHeight )
+#### Example
+##### Bart Stations (47 cells)  ( || => pigeonHoleCellHeight )
+
 This model is visual representation of the gesture mappings to the SlidingPageView in this app. But it is meant to size to any PageView with more than 2 children.
 Upon orientation change, the cells may grow in the x-direction to counter system UI padding. For example the landscape left cells on an iphone X are a greater width because the SlidingPageView covers the notched area. 
 ```
@@ -72,7 +74,7 @@ __________________
 Nav Bar or Bottom
 ```
 
-## Gesture (tap or drag) to Page Number
+## Coversion: Gesture (tap or drag) to Page Number
 When a tap or scroll occurs, a local touch position is computed. This gets turned into a y-value that ranges from 0 to the height of the PageView.
 
 #### Page 1
@@ -89,7 +91,7 @@ int pigeonHoleIndex = ((localY - _sliderHeight) / ((_totalHeight - (_sliderHeigh
 int nextIndex = localY <= _sliderHeight ? 0 : localY >= _totalHeight - _sliderHeight ? _itemCount-1 :  pigeonHoleIndex;  // Check the top and bottom of the canvas against the touch location. If inside the pigeon, 1 < n < itemCount, use pigeon index.
 ```
 
-## Page number to yOffset 
+## Conversion: Page number to slider offset 
 This method is used by a Positioned widget that parents the slider container. The top parameter is calculated using offSet(currentIndex).
 
 #### Page 1
